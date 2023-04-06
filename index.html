@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アニメ診断</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="header">
+
+    <!--Content before waves-->
+    <div class="inner-header flex">
+      
+      <h1>あなたにおすすめのアニメ診断</h1>
+      <div id="app" class="app">
+        <button id="startButton" class="btn-hover color-2 start-button" onclick="startQuiz()">診断スタート</button>
+        <div id="questionContainer" class="question-container hidden">
+          <p id="questionText" class="question-text"></p>
+          <div id="options" class="options"></div>
+        </div>
+        <div id="resultContainer" class="result-container hidden">
+          <h2 id="recommendText" class="recommend-text">あなたにおすすめのアニメは...</h2>
+          <p id="animeTitle" class="anime-title anime-title-animation"></p>
+          <br>
+          <img class="anim-box animation" id="animeImage" src="" alt="アニメ画像">
+          <h3 id="story" >物語のあらすじ</h3>
+          <p id="animeDescription" class="anime-description"></p>
+          <h3 id="attractiveness" >このアニメの魅力</h3>
+          <p id="animeCharm" class="anime-charm"></p>
+          <button id="restartButton" class="btn-hover color-2 restart-button">診断へ戻る</button>
+
+        </div>
+        
+      </div>
+      
+    </div>
+
+    <!--Waves Container-->
+     <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+    <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+    </defs>
+    
+    <g class="parallax">
+    <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+    <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+    <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+    <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+    </g>
+    </svg>
+    </div>
+    <!--Waves end-->
+    
+
+  <script src="script.js"></script>
+</body>
+</html>

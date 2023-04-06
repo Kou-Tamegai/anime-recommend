@@ -1,0 +1,336 @@
+body {
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-button,
+.option-button {
+  font-size: 1.5rem;
+  padding: 15px 25px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.start-button:hover,
+.option-button:hover {
+  background-color: #45a049;
+}
+
+.hidden {
+  display: none;
+}
+
+.question-container,
+.result-container {
+  z-index: 2;
+  width: 100%;
+  max-width: 700px;
+  padding: 20px;
+  margin: 20px auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  background-color: white;
+}
+
+.result-container {
+  overflow-y: scroll;
+  max-height: 600px;
+  margin-top: 20%;
+}
+
+.question-text {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.anime-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #d414f2;
+  margin-bottom: 10px;
+  word-break: break-all;
+}
+
+#story,
+#attractiveness {
+   font-size: 24px;
+    text-align: left;
+    margin: 10px;
+    color: #d414f2;
+    position: relative;
+    font-style: normal;
+    background-image: linear-gradient(
+    70deg,
+    rgb(251, 143, 34)  45%, 
+    #fff 50%,
+    rgb(251, 143, 34) 55% 
+  );
+    background-size: 500% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: shine 4.5s infinite;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.anime-description, 
+.anime-charm {
+  text-align: left;
+  font-size: 18px;
+}
+
+
+.btn-hover {
+  width: 300px;
+  font-size: 22px;
+  font-weight: 900;
+  color: #fff;
+  cursor: pointer;
+  margin: 20px;
+  height: 75px;
+  text-align:center;
+  border: none;
+  background-size: 300% 100%;
+
+  border-radius: 50px;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover:focus {
+  outline: none;
+}
+
+.btn-hover:hover {
+  background-position: 100% 0;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.btn-hover.color-2 {
+  background-image: linear-gradient(to right, #f5ce62, #e43603, #fa7199, #e85a19);
+  box-shadow: 0 4px 15px 0 rgba(229, 66, 10, 0.75);
+}
+
+.recommend-text {
+  font-size: 1.5rem;
+  color: black;
+  margin-bottom: 20px;
+}
+
+/* 背景アニメーション */
+
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+
+
+p {
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1px;
+  font-size:14px;
+  color: #333333;
+}
+
+.header {
+  position: relative;
+  text-align: center;
+  background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+  color: white;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.logo {
+  width:50px;
+  fill:white;
+  padding-right:15px;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.inner-header {
+  height:65vh;
+  width:100%;
+  margin: 0;
+  padding: 0;
+}
+
+.flex { /*Flexbox for containers*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.waves {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 150px;
+  z-index: 1;
+}
+
+
+.content {
+  position:relative;
+  height:20vh;
+  text-align:center;
+  background-color: white;
+}
+
+.inner-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.anime-title-animation {
+  opacity: 0;
+  transform: translateX(-50px) scale(0.8);
+  animation: anime-title 2s ease-in-out forwards;
+}
+
+@keyframes anime-title {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateX(0) scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+#animeImage {
+  margin: 0 auto;
+  max-width: 600px;
+  transition: opacity 1s ease-in-out;
+}
+
+#animeImage.show {
+  opacity: 1;
+}
+
+.anim-box {
+  animation: poyoyon3 5s infinite;
+  opacity: 1;
+}
+
+/* 画像のアニメーション */
+
+@keyframes poyoyon3 {
+  0%, 40% {
+    transform: skew(0deg, 0deg);
+  }
+  3% {
+    transform: skew(3deg, 3deg);
+  }
+  7% {
+    transform: skew(-4deg, -4deg);
+  }
+  12% {
+    transform: skew(3deg, 3deg);
+  }
+  15% {
+    transform: skew(-2deg, -2deg);
+  }
+  20% {
+    transform: skew(1deg, 1deg);
+  }
+  25% {
+    transform: skew(-0.6deg, -0.6deg);
+  }
+  30% {
+    transform: skew(0.3deg, 0.3deg);
+  }
+}
+
+
+
+/* Animation */
+@import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
+}
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+@keyframes move-forever {
+  0% {
+   transform: translate3d(-90px,0,0);
+  }
+  100% { 
+    transform: translate3d(85px,0,0);
+  }
+}
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+  .waves {
+    height:40px;
+    min-height:40px;
+  }
+  .content {
+    height:30vh;
+  }
+  h1 {
+    font-size:24px;
+  }
+}
